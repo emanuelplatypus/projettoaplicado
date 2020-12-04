@@ -4,12 +4,23 @@ import moment from 'moment';
 class Main extends Component {
 	
 	constructor(props) {
-    super(props);
-		this.state = { username: ''};
-		  }
+    super(props);		
+	  this.state = { attivox: true};
+	}
 	
 	myChangeHandler = (event) => {
 		  const opcao1 = this.tippoUssuario.value
+		  
+		  if ( opcao1.localeCompare('1–Associado')  )
+		  this.setState({
+			attivox: false
+		  })
+		  
+		  if ( opcao1.localeCompare('2–Operador')  )
+		  this.setState({
+			attivox: true
+		  })
+		  
 		  const nome1 = this.nomeAssociado.value		  
 		  const placa1 = this.tareffaPlacca.value
 		  const datta1 = this.tareffaData.value
@@ -18,12 +29,13 @@ class Main extends Component {
 		  var mesex = datta1.substring(5, 7);
 		  var dia = datta1.substring(8, 10);
 		  var dataFormatada = dia + '/'+ mesex +'/'+ anox;
+		  
 		  this.setState({
 			usercontent:
-		    opcao1+'; '+nome1+'; '+dataFormatada+'; '+placa1+'; '+ocorr1+'; '
+		    opcao1+'; '+nome1+'; '+dataFormatada+'; '+placa1+'; '+ocorr1
 		  });
 	}
-	
+
   	onChange(e){
 		
 		const crypto = require('crypto');
@@ -46,6 +58,8 @@ class Main extends Component {
         <form onSubmit={(event) => {
           event.preventDefault()
 		  const opcao1 = this.tippoUssuario.value
+		  const marcador1 = 'marcNULO'
+		  const marcador2 = this.tareffaMarccaddor.value
           const nome1 = this.nomeAssociado.value		  
 		  const placa1 = this.tareffaPlacca.value
 		  const datta1 = this.tareffaData.value
@@ -56,19 +70,24 @@ class Main extends Component {
 		  var dia = datta1.substring(8, 10);
 		  var dataFormatada = dia + '/'+ mesex +'/'+ anox;
 		  var timestamp = new Date().getTime();
-          this.props.createTask(opcao1+' '+nome1+' '+dataFormatada+' '+placa1+' '+ocorr1+' '+hashd1, timestamp)
+		  if ( marcador2.length == 0  )
+            this.props.createTask(opcao1+' '+nome1+' '+dataFormatada+' '+marcador1+' '+placa1+' '+ocorr1+' '+hashd1, timestamp)
+	      if ( marcador2.length > 0   )
+		    this.props.createTask(opcao1+' '+nome1+' '+dataFormatada+' '+marcador2+' '+placa1+' '+ocorr1+' '+hashd1, timestamp)
         }}>
+		
 		
 		  <div className="form-group mr-sm-2">	
 		  
 		  <label for="cars"><span style={{color: '#007bff'}}>Usuário:&nbsp;&nbsp;&nbsp;</span></label>
 			<select id="tippoUssuario" content="cars" onChange={this.myChangeHandler} ref={(select) => { this.tippoUssuario = select }} required>   
-			  <option value="">Selecione abaixo a categoria</option>
+			  <option value="">Selecione a categoria</option>
 			  <option value="1–Associado">1–Associado</option>
 			  <option value="2–Operador">2–Operador</option>
 		   </select>
 		    
-          </div>
+          </div>		         
+		  
           <div className="form-group mr-sm-2">
             <input
               id="nomeAssociado"
@@ -87,7 +106,8 @@ class Main extends Component {
 			  onChange={this.myChangeHandler}
               ref={(input) => { this.tareffaData = input }}
               className="form-control"
-              max={moment().format("YYYY-MM-DD")}
+              max={moment().format("YYYY-MM-DD")}			  
+			  style={{background: 'white'}}
               required />
           </div>
 		  
@@ -111,8 +131,7 @@ class Main extends Component {
               className="form-control"
               placeholder="Ocorrencia"
               required />
-          </div>
-		  
+          </div>		  
 		  		 
 		<div className="form-group mr-sm-2">
 		  <input type='text' class="form-control" placeholder="Registro completo" value={this.state.usercontent} />		
@@ -128,6 +147,18 @@ class Main extends Component {
               placeholder="Código do documento"
               /*required*/ />
           </div>
+		  
+		 <div className="form-group mr-sm-2">
+            <input
+              id="tareffaMarccaddor"
+              type="text"
+			  onChange={this.myChangeHandler}
+              ref={(input) => { this.tareffaMarccaddor = input }}
+              className="form-control"
+			  disabled = {this.state.attivox} // inicio setado como 'true'
+              placeholder="Marcador (campo preenchido apenas pela Central)"
+              required />			
+          </div> 
 
 		<p></p>
 		
@@ -162,7 +193,7 @@ class Main extends Component {
                   <th scope="row">{tareffa.id.toString()}</th>
 				  <td>{tareffa.numReeggistro.toString()}</td>
                   <td>{tareffa.content}</td>                  
-                  <td>{tareffa.owner}</td>
+                  <td>{tareffa.owner.toString().substring(2, 10)}...</td>
                 </tr>
               )
             })}
