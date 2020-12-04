@@ -1,8 +1,8 @@
+/*
 const withSass = require('@zeit/next-sass');
 const withCSS = require("@zeit/next-css");
 module.exports = withCSS(withSass({
    webpack (config, options) {
-	   target: 'serverless',
        config.module.rules.push({
            test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
            use: {
@@ -16,3 +16,8 @@ module.exports = withCSS(withSass({
        return config;
    }
 }));
+*/
+module.exports = {
+  target: 'serverless',
+  // Other options
+};
