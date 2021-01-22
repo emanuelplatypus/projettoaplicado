@@ -1,8 +1,8 @@
 Name,Weeks,Gender
 Reboque automóvel - até 100 km,77,Female
-Reboque automóvel - mais de 100 km,,Female
-Reboque motoclicleta - até 100 km,9,Female
-Reboque motoclicleta - mais de 100 km,08,Female
+Reboque automóvel - mais de 100 km,75,Female
+Reboque motoclicleta - até 100 km,69,Female
+Reboque motoclicleta - mais de 100 km,58,Female
 Carga emergencial de bateria automóvel,86,Male
 Carga emergencial de bateria motocicleta,70,Male
 Substituição definitiva de bateria motocicleta,68,Male
@@ -27,7 +27,7 @@ Reparos elétricos com uso da franquia - até 1500 reais,9,Male
 Reparos elétricos com uso da franquia - superior a 1500 reais,4,Male
 Reparos elétricos sem uso da franquia - até 1500 reais,41,Male
 Reparos elétricos sem uso da franquia - superior a 1500 reais,40,Male
-Serviço troca de pneu - aro de categorias A–F,,Female
+Serviço troca de pneu - aro de categorias A–F,30,Female
 Serviço troca de pneu - aro de categorias G–M,8,Female
 Maria Sharapova,,Female
 Mats Wilander,0,Male
