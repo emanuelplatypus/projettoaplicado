@@ -1,31 +1,31 @@
-Name,Weeks,Gender
-Reboque automóvel - até 100 km,77,Female
-Reboque automóvel - mais de 100 km,75,Female
-Reboque motoclicleta - até 100 km,69,Female
-Reboque motoclicleta - mais de 100 km,58,Female
-Carga emergencial de bateria automóvel,86,Male
-Carga emergencial de bateria motocicleta,70,Male
-Substituição definitiva de bateria motocicleta,68,Male
-Substituição definitiva de bateria automóvel,60,Male
-Reparos mecânicos com uso da franquia - até 5000 reais,23,Male
-Reparos mecânicos com uso da franquia - superior a 5000 reais,09,Male
-Reparos mecânicos sem uso da franquia - até 5000 reais,78,Male
-Reparos mecânicos sem uso da franquia - superior a 5000 reais,70,Male
-Deslocamento para análise de ocorrência - até 150 km,67,Male
-Deslocamento para análise de ocorrência - mais de 150 km,17,Male
-Despesas operacionais da Central - registros em cadeia,09,Male
-Despesas operacionais da Central - funcinários,51,Male
-Despesas operacionais da Central - fixos,28,Male
-Arrecadações associados - Proteção a Terceiros,80,Male
-Arrecadações associados - Assistência 24 horas,72,Male
-Arrecadações associados - Taxa administrativa - faixa 01,71,Male
-Arrecadações associados - Taxa administrativa - faixa 02,58,Male
-Arrecadações associados - Taxa administrativa - faixa 03,51,Male
-Arrecadações associados - Taxa administrativa - faixa 04,43,Male
-Arrecadações associados - Taxa administrativa - faixa 05,41,Male
-Reparos elétricos com uso da franquia - até 1500 reais,9,Male
-Reparos elétricos com uso da franquia - superior a 1500 reais,4,Male
-Reparos elétricos sem uso da franquia - até 1500 reais,41,Male
-Reparos elétricos sem uso da franquia - superior a 1500 reais,40,Male
-Serviço troca de pneu - aro de categorias A–F,30,Female
-Serviço troca de pneu - aro de categorias G–M,8,Female
+Nome,Valores,Flagg
+Reboque automóvel - até 100 km,77,xy001
+Reboque automóvel - mais de 100 km,75,xy001
+Reboque motoclicleta - até 100 km,69,xy001
+Reboque motoclicleta - mais de 100 km,58,xy001
+Carga emergencial de bateria automóvel,86,xx002
+Carga emergencial de bateria motocicleta,70,xx002
+Substituição definitiva de bateria motocicleta,68,xx002
+Substituição definitiva de bateria automóvel,60,xx002
+Reparos mecânicos com uso da franquia - até 5000 reais,23,xx002
+Reparos mecânicos com uso da franquia - superior a 5000 reais,09,xx002
+Reparos mecânicos sem uso da franquia - até 5000 reais,78,xx002
+Reparos mecânicos sem uso da franquia - superior a 5000 reais,70,xx002
+Deslocamento para análise de ocorrência - até 150 km,67,xx002
+Deslocamento para análise de ocorrência - mais de 150 km,17,xx002
+Despesas operacionais da Central - registros em cadeia,09,xx002
+Despesas operacionais da Central - funcinários,51,xx002
+Despesas operacionais da Central - fixos,28,xx002
+Arrecadações associados - Proteção a Terceiros,80,xx002
+Arrecadações associados - Assistência 24 horas,72,xx002
+Arrecadações associados - Taxa administrativa - faixa 01,71,xx002
+Arrecadações associados - Taxa administrativa - faixa 02,58,xx002
+Arrecadações associados - Taxa administrativa - faixa 03,51,xx002
+Arrecadações associados - Taxa administrativa - faixa 04,43,xx002
+Arrecadações associados - Taxa administrativa - faixa 05,41,xx002
+Reparos elétricos com uso da franquia - até 1500 reais,9,xx002
+Reparos elétricos com uso da franquia - superior a 1500 reais,4,xx002
+Reparos elétricos sem uso da franquia - até 1500 reais,41,xx002
+Reparos elétricos sem uso da franquia - superior a 1500 reais,40,xx002
+Serviço troca de pneu - aro de categorias A–F,30,xy001
+Serviço troca de pneu - aro de categorias G–M,8,xy001
